@@ -19,4 +19,12 @@ public class QuickFindUF{
 			if(id[i]==pid) id[i]=qid;
 		}
 	}
+	public find(int i){ // find method--Interview Questions problem no 2
+		int max=0;
+		while(i!=id[i]){
+			if(i>max) max=i;
+			i=id[i];
+		}
+		return max;
+	}
 }
