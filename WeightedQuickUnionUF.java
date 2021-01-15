@@ -13,7 +13,7 @@ public class WeightedQuickUnionUF{
 			sz[i]=count(i);
 		}
 	}
-	private int count(int i){
+	private int count(int i){ // count method to count how many components are in the tree
 		int count=0;
 		while(i!=id[i]){
 			i=id[i];
