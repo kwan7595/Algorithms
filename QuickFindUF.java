@@ -19,7 +19,7 @@ public class QuickFindUF{
 			if(id[i]==pid) id[i]=qid;
 		}
 	}
-	public find(int i){ // find method--Interview Questions problem no 2
+	public int find(int i){ // find method--Interview Questions problem no 2
 		int max=0;
 		while(i!=id[i]){
 			if(i>max) max=i;
@@ -27,4 +27,9 @@ public class QuickFindUF{
 		}
 		return max;
 	}
+	public int successor(int x){ // successor method -- Interview Questions problem no 3
+		id[x]=x;
+		return find(x+1);
+	}
+		
 }
