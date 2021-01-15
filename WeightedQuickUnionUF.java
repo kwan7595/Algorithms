@@ -22,9 +22,10 @@ public class WeightedQuickUnionUF{
 		return count;
 	}
 	private int root(int i){
-			while(i!=id[i]) i=id[i];
-			return i;
-			}
+			while(i!=id[i]){
+				id[i]=id[id[i]];
+				i=id[i];
+			}//path compression--> making every node in the path point to its grandpa!
 	
 	public boolean connected(int p, int q){
 			return root(p)==root(q);
